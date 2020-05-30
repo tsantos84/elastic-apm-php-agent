@@ -33,6 +33,7 @@
         }
     ],
     "scripts": {
+        "lint": "find src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
         "cs-fix": "\"./tools/php-cs-fixer\" --config=config/php-cs-fixer.php fix src/ tests/",
         "ci:tests": "\"tools/phpunit\" tests/",
         "ci:cs-check": "\"./tools/php-cs-fixer\" --config=config/php-cs-fixer.php fix --dry-run -v --show-progress=dots --diff-format=udiff src/ tests/"
